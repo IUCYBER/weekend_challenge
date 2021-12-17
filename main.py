@@ -19,9 +19,6 @@ if __name__ == '__main__':
     encrypted = encrypt(plain, key)
     decrypted = decrypt(encrypted, key)
 
-    if encrypted or decrypted is None:
-        exit(1)
-
     print("plain: %s " % plain)
     print("key:  %d " % key)
     print("encrypted:  %s " % encrypted)
