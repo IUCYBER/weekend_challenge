@@ -1,6 +1,6 @@
-#weekend_challenge
+# weekend_challenge
 
-##Missions
+## Missions
 
 - Populate `encrypt(plain, key)` and `decrypt(encrypted, key)` functions body to apply Caesar cipher. It must work for printable characters of ascii. Hint: [32, 126].
 
@@ -8,7 +8,7 @@
 
 - Create your branch, push your code, open a pull request, check test results (github acitons).
 
-##Rules
+## Rules
 
 - Variable and function names must be clear and in English.
 
