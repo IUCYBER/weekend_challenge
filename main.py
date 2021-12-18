@@ -3,14 +3,47 @@ def encrypt(plain, key):
 
     # TODO your code will be here
     # this is new comment
-    pass
+
+    sifreliYazı=[]
+
+    for x in plain:
+
+        if x.isupper():
+            # alphabet[(alphabet.index(x) + 3) % len(alphabet)]
+
+            formul = ((ord(x) - 65) + key) % 26
+            sifreliYazı.append(chr(formul + 65))
+        elif x.islower():
+            formul = ((ord(x) - 97) + key) % 26
+            sifreliYazı.append(chr(formul + 97))
+        else:
+            sifreliYazı.append(x)
+    return "".join(sifreliYazı)
+
 
 
 def decrypt(encrypted, key):
     # type: (str, int) -> str
 
     # TODO your code will be here
-    pass
+    sifreliYazı=[]
+
+    for x in encrypted:
+        if x.isupper():
+            formul = ((ord(x) - 65) - key) % 26
+            if formul <0:
+                formul+=26
+            sifreliYazı.append(chr(formul + 65))
+        elif x.islower():
+            formul = ((ord(x) - 97) - key) % 26
+            if formul <0:
+                formul+=26
+            sifreliYazı.append(chr(formul + 97))
+        else:
+            sifreliYazı.append(x)
+    return "".join(sifreliYazı)
+
+
 
 
 if __name__ == '__main__':
@@ -20,8 +53,8 @@ if __name__ == '__main__':
     encrypted = encrypt(plain, key)
     decrypted = decrypt(encrypted, key)
 
-    if encrypted or decrypted is None:
-        exit(1)
+   # if encrypted or decrypted is None:
+     #   exit(1)
 
     print("plain: %s " % plain)
     print("key:  %d " % key)
