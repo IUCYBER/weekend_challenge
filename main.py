@@ -35,9 +35,7 @@ def encrypt(plain, key):
 
 def decrypt(encrypted, key):
     # type: (str, int) -> str
-
-    # TODO your code will be here
-    pass
+    return shifter(encrypted, key, False)
 
 
 if __name__ == '__main__':
