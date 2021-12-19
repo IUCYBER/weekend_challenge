@@ -1,7 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM alpine
-ENV PYTHONUNBUFFERED=1
-RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+FROM python:3.9-alpine
 WORKDIR /app
 COPY . .
 CMD [ "sh", "run_tests.sh" ];
