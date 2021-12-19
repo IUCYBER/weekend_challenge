@@ -9,6 +9,7 @@ def modulus(num):
 
 
 def shifter(unshifted, key, isEncrypt):
+    # type: (str, int, bool) -> str
     shiftedStr = ""
     if key == 0:
         return unshifted
