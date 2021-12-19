@@ -2,7 +2,10 @@ def encrypt(plain: str, key: int):
     # type: (str, int) -> str
 
     # TODO your code will be here
-    # this is new comment
+    encryptedMsg = ""
+    for char in plain:
+        encryptedMsg += chr((ord(ch)-32 + key) % 95+32)
+        return encryptedMsg
     pass
 
 
