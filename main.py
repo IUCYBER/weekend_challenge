@@ -13,6 +13,10 @@ def decrypt(encrypted: str, key: int):
     # type: (str, int) -> str
 
     # TODO your code will be here
+    decryptedMsg = ""
+    for char in encrypted:
+        decryptedMsg += chr((ord(ch)-32 - key) % 95+32)
+    return decryptedMsg
     pass
 
 
