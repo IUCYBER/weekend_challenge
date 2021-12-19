@@ -30,10 +30,7 @@ def shifter(unshifted, key, isEncrypt):
 
 def encrypt(plain, key):
     # type: (str, int) -> str
-
-    # TODO your code will be here
-    # this is new comment
-    pass
+    return shifter(plain, key, True)
 
 
 def decrypt(encrypted, key):
