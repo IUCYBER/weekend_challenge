@@ -1,3 +1,12 @@
+def modulus(num):
+    # type: (int) -> int
+    if num < 0:
+        num = abs(num) % 95
+        num *= -1
+    else:
+        num %= 95
+    return num
+
 def encrypt(plain, key):
     # type: (str, int) -> str
 
