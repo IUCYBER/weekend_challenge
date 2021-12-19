@@ -1,16 +1,15 @@
-def encrypt(plain, key):
-    # type: (str, int) -> str
+def encrypt(plain: str, key: int):
+    encryptedMsg = ""
+    for char in plain:
+        encryptedMsg += chr((ord(char) - 32 + key) % 95 + 32)
+    return encryptedMsg
 
-    # TODO your code will be here
-    # this is new comment
-    pass
 
-
-def decrypt(encrypted, key):
-    # type: (str, int) -> str
-
-    # TODO your code will be here
-    pass
+def decrypt(encrypted: str, key: int):
+    decryptedMsg = ""
+    for char in encrypted:
+        decryptedMsg += chr((ord(char) - 32 - key) % 95 + 32)
+    return decryptedMsg
 
 
 if __name__ == '__main__':
