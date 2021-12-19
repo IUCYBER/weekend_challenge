@@ -4,8 +4,8 @@ def encrypt(plain: str, key: int):
     # TODO your code will be here
     encryptedMsg = ""
     for char in plain:
-        encryptedMsg += chr((ord(ch)-32 + key) % 95+32)
-        return encryptedMsg
+        encryptedMsg += chr((ord(char) - 32 + key) % 95 + 32)
+    return encryptedMsg
     pass
 
 
@@ -15,7 +15,7 @@ def decrypt(encrypted: str, key: int):
     # TODO your code will be here
     decryptedMsg = ""
     for char in encrypted:
-        decryptedMsg += chr((ord(ch)-32 - key) % 95+32)
+        decryptedMsg += chr((ord(char) - 32 - key) % 95 + 32)
     return decryptedMsg
     pass
 
