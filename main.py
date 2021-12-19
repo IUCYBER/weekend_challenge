@@ -1,4 +1,4 @@
-def encrypt(plain, key):
+def encrypt(plain: str, key: int):
     # type: (str, int) -> str
 
     # TODO your code will be here
@@ -6,7 +6,7 @@ def encrypt(plain, key):
     pass
 
 
-def decrypt(encrypted, key):
+def decrypt(encrypted: str, key: int):
     # type: (str, int) -> str
 
     # TODO your code will be here
